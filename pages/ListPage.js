@@ -26,7 +26,16 @@ export default function ListPage({ navigation }) {
           </Text>
         )}
         keyExtractor={(item) => item.id}
+        style={{ flex: 1}}
       />
+      <Button
+        title="Home Page"
+        onPress={() => navigation.navigate("Home")}
+      ></Button>
+      <Button
+        title="About Page"
+        onPress={() => navigation.navigate("About")}
+      ></Button>
     </SafeAreaView>
   );
 }

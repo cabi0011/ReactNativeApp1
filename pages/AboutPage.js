@@ -13,10 +13,6 @@ export default function AboutPage({ navigation }) {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View>
-          <Button
-            title="Home Page"
-            onPress={() => navigation.navigate("Home")}
-          ></Button>
           <Image
             source={require("../assets/dog.png")}
             style={{
@@ -27,8 +23,18 @@ export default function AboutPage({ navigation }) {
             }}
           />
           <Text>
-            This is the About Page. 
+            This is the About Page. There is a photo of a dog in this page.
           </Text>
+          <Button
+            title="Home Page"
+            onPress={() => navigation.navigate("Home")}
+          ></Button>
+          <Button
+          styles={styles.Button}
+          title="List Page"
+          onPress={() => navigation.navigate("List")}>
+          </Button>
+
         </View>
       </ScrollView>
     </SafeAreaView>
