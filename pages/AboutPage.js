@@ -34,7 +34,6 @@ export default function AboutPage({ navigation }) {
           title="List Page"
           onPress={() => navigation.navigate("List")}>
           </Button>
-
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -49,4 +48,12 @@ const styles = StyleSheet.create({
     // justifyContent: "center",
     // paddingTop: 48,
   },
+  Button :{
+    borderRadius: 75,
+    margin: 1.5,
+    backgroundColor: "#0000FF"
+  },
+  buttonText: {
+    color: "#FFFFFF"
+  }
 });

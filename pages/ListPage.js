@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Pressable
 } from "react-native";
 
 export default function ListPage({ navigation }) {
@@ -14,6 +15,7 @@ export default function ListPage({ navigation }) {
       <FlatList
         data={data}
         renderItem={({ item }) => (
+        <Pressable onPress={() => handlePress(item)}>
           <Text
             style={{
               padding: 16,
@@ -24,6 +26,7 @@ export default function ListPage({ navigation }) {
           >
             {item.title}
           </Text>
+        </Pressable>  
         )}
         keyExtractor={(item) => item.id}
         style={{ flex: 1}}
@@ -134,4 +137,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     // paddingTop: 48,
   },
+  Button :{
+    borderRadius: 75,
+    margin: 1.5,
+    backgroundColor: "#0000FF"
+  },
+  buttonText: {
+    color: "#FFFFFF"
+  }
 });
+
+function handlePress (item) {
+  console.log('Pressed item:', item)
+}

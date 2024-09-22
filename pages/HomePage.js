@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Button, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Button, SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
 
 export default function HomePage({ navigation }) {
   return (
@@ -9,13 +9,22 @@ export default function HomePage({ navigation }) {
         <Button
           title="About Page"
           onPress={() => navigation.navigate("About")}
-        ></Button>
-                  <Button
-          styles={styles.Button}
+        />
+        <Button
+          style={styles.Button}
           title="List Page"
-          onPress={() => navigation.navigate("List")}>
-          </Button>
+          onPress={() => navigation.navigate("List")}
+        />
         <StatusBar style="auto" />
+        <Image
+            source={require("../assets/doggo.jpg")}
+            style={{
+              borderColor: "#eee",
+              borderWidth: 5,
+              width: 300,
+              height: 400,
+            }}
+          />
       </View>
     </SafeAreaView>
   );
@@ -29,4 +38,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     // paddingTop: 48,
   },
+  Button :{
+    borderRadius: 75,
+    margin: 1.5,
+    backgroundColor: "#0000FF"
+  },
+  buttonText: {
+    color: "#FFFFFF"
+  }
 });
