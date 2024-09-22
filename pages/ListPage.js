@@ -12,6 +12,14 @@ import {
 export default function ListPage({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
+            <Button
+        title="Home Page"
+        onPress={() => navigation.navigate("Home")}
+      ></Button>
+      <Button
+        title="About Page"
+        onPress={() => navigation.navigate("About")}
+      ></Button>
       <FlatList
         data={data}
         renderItem={({ item }) => (
@@ -31,14 +39,6 @@ export default function ListPage({ navigation }) {
         keyExtractor={(item) => item.id}
         style={{ flex: 1}}
       />
-      <Button
-        title="Home Page"
-        onPress={() => navigation.navigate("Home")}
-      ></Button>
-      <Button
-        title="About Page"
-        onPress={() => navigation.navigate("About")}
-      ></Button>
     </SafeAreaView>
   );
 }
@@ -133,18 +133,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    // alignItems: "center",
-    justifyContent: "center",
-    // paddingTop: 48,
   },
   Button :{
     borderRadius: 75,
     margin: 1.5,
     backgroundColor: "#0000FF"
   },
-  buttonText: {
-    color: "#FFFFFF"
-  }
 });
 
 function handlePress (item) {

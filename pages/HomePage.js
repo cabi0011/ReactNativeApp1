@@ -4,8 +4,8 @@ import { Button, SafeAreaView, StyleSheet, Text, View, Image } from "react-nativ
 export default function HomePage({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <Text>Hello from React Native!</Text>
+      <View style={styles.centeredView}>
+        <Text style={styles.centeredText}>Hello from React Native!</Text>
         <Button
           title="About Page"
           onPress={() => navigation.navigate("About")}
@@ -36,14 +36,20 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    // paddingTop: 48,
+  },
+  centeredView: {
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  centeredText: {
+    textAlign: "center"
   },
   Button :{
     borderRadius: 75,
     margin: 1.5,
     backgroundColor: "#0000FF"
   },
-  buttonText: {
-    color: "#FFFFFF"
-  }
+  // buttonText: {
+  //   color: "#FFFFFF"
+  // }
 });
